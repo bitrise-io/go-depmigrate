@@ -30,7 +30,7 @@ modupdate projectPath`)
 	}
 
 	if migrator.ShouldMigrate() {
-		if err := migrator.UpdateProjectToGoModules(); err != nil {
+		if err := migrator.UpdateProjectToGoModules("go"); err != nil {
 			failf("Failed to update to go modules: ", err)
 		}
 	}

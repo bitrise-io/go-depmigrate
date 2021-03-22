@@ -38,11 +38,11 @@ func (m GoModMigrator) ShouldMigrate() bool {
 	return err == nil
 }
 
-func (m GoModMigrator) UpdateProjectToGoModules() error {
+func (m GoModMigrator) UpdateProjectToGoModules(goBinaryPath string) error {
 	cmds := []*command.Model{
-		command.New("go", "mod", "init"),
-		command.New("go", "mod", "tidy"),
-		command.New("go", "mod", "vendor"),
+		command.New(goBinaryPath, "mod", "init"),
+		command.New(goBinaryPath, "mod", "tidy"),
+		command.New(goBinaryPath, "mod", "vendor"),
 	}
 
 	for _, cmd := range cmds {
