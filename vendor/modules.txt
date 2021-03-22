@@ -1,0 +1,7 @@
+# github.com/bitrise-io/go-utils v0.0.0-20210318101856-947ef8d6c529
+## explicit
+github.com/bitrise-io/go-utils/colorstring
+github.com/bitrise-io/go-utils/command
+github.com/bitrise-io/go-utils/errorutil
+github.com/bitrise-io/go-utils/log
+github.com/bitrise-io/go-utils/pathutil
