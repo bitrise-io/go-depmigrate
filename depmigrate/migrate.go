@@ -55,7 +55,7 @@ func (m GoModMigrator) Migrate(goBinaryPath, goRoot, packageName string) error {
 	}
 
 	for _, cmd := range cmds {
-		cmd.SetDir(m.projectDir).SetStdout(os.Stdout).SetStderr(os.Stderr)
+		cmd.SetDir(m.projectDir)
 		cmd.AppendEnvs("GOROOT=" + goRoot)
 
 		goModPath := filepath.Join(m.projectDir, "go.mod")
