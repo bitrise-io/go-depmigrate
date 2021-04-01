@@ -49,7 +49,7 @@ modupdate projectPath`)
 
 	if stepModel.Toolkit != nil && stepModel.Toolkit.Go != nil {
 		if migrator.IsGoPathModeStep() {
-			if err := migrator.UpdateProjectToGoModules("go", stepModel.Toolkit.Go.PackageName); err != nil {
+			if err := migrator.Migrate("go", "", stepModel.Toolkit.Go.PackageName); err != nil {
 				failf("Failed to update to go modules: ", err)
 			}
 
